@@ -6,7 +6,7 @@ class CurrencyConverter:
         self.base_currency = base_currency
         self.target_currency = target_currency
 
-    def get_rate(self):
+    def get_rate(self, base_currency, target_currency):
         """환율 API에서 가져오는 메소드"""
         api_key = "b99f132ee63b480f3282143d" #내 키임
         url = f"https://v6.exchangerate-api.com/v6/{api_key}/latest/{base_currency}"
