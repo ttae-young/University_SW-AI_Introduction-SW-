@@ -9,10 +9,10 @@ class CurrencyConverter:
     def get_rate(self):
         """환율 API에서 가져오는 메소드"""
         api_key = "b99f132ee63b480f3282143d" #내 키임
-        url = f"https://v6.exchangerate-api.com/v6/{api_key}/latest/{self.base_currency}"
+        url = f"https://v6.exchangerate-api.com/v6/{api_key}/latest/{base_currency}"
         response = requests.get(url)
         data = response.json() #json형식으로
-        self.rate = data['conversion_rates'][self.target_currency]
+        self.rate = data['conversion_rates'][target_currency]
 
     def convert(self, amount):
         """금액 변환"""
